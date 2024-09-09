@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: hsl(234, 29%, 20%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* Prevent any overflow */
+}
+
+.Sign-up-form {
+    background-color: hsl(0, 0%, 100%);
+    padding: 15px;
+    margin: 15px auto;
+    width: 105vh;
+    display: flex;
+    flex-direction: row-reverse;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+
+.Sign-up-form .picture {
+    width: 60%;
+    height: 70vh;
+    border-radius: 10px;
+    background-image: url(./assets/images/illustration-sign-up-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.headline {
+    font-size: 40px;
+    padding: 0px 0px 10px 0px;
+}
+
+.intro {
+    padding: 0px 0px 15px 10px;
+}
+
+p {
+    padding: 10px;
+    display: flex;
+    padding: 10px;
+
+    flex-wrap: nowrap;
+
+}
+
+svg {
+    margin-right: 15px;
+}
+
+.email {
+    width: 80%;
+    border-radius: 5px;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.email.error {
+    border: 1px solid rgba(255, 0, 0, 0.6);
+    background-color: rgba(255, 0, 0, 0.05);
+}
+
+button {
+    width: 80%;
+    background: linear-gradient(135deg, #f84f3c, #e65445);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    border-style: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(255, 98, 80, 0.3);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #e65445, #ff6250);
+    box-shadow: 0 8px 16px rgba(255, 98, 80, 0.5), 0 4px 8px rgba(230, 84, 69, 0.5);
+    transform: scale(1.05);
+}
+
+.error-message {
+    color: red;
+    visibility: hidden;
+    margin-top: 5px;
+}
+
+.success-message {
+    width: 60vh;
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%);
+    padding: 40px;
+    background-color: #fff;
+    visibility: hidden;
+    border-radius: 15px;
+}
+
+.success-message h1 {
+    padding: 10px;
+}
+
+.success-message p {
+    margin-top: 15px;
+}
+
+.success-message svg {
+    scale: 1;
+    margin-top: 20px;
+}
+
+.success-message .dismiss {
+    cursor: pointer;
+    border-style: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    text-align: center;
+    color: white;
+}
+
+.attribution a {
+    color: hsl(227, 46%, 76%);
+}
+
+
+@media (max-width: 425px) {
+    body {
+        background-color: white;
+    }
+
+    .Sign-up-form {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        margin: 0;
+        border-radius: 0px;
+    }
+
+    .Sign-up-form .picture {
+        width: 50vh;
+        height: 35vh;
+        background-image: url(./assets/images/illustration-sign-up-mobile.svg);
+        background-size: cover;
+        transform: translate(-5%, -20px);
+        background-position: top center;
+        border-radius: 0px 0px 25px 25px;
+    }
+
+    .success-message .dismiss {
+        background-color: #f84f3c;
+        padding: 10px;
+    }
+
+    .email {
+        width: 100%;
+        padding: 10px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .success-message {
+        margin-top: 0px;
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+        position: absolute;
+        top: 0;
+    }
+
+    .attribution {
+        visibility: hidden;
+    }
+}
